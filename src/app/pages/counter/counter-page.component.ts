@@ -16,12 +16,12 @@ export class CounterPageComponent {
   counterSignal = signal(10);
 
   constructor() {
-    setInterval(() => {
-      // this.counter += 1;
-      this.counterSignal.update(v => v+1);
-      // this.increaseBy(1);
-      console.log('tick');
-    }, 2000);
+    // setInterval(() => {
+    //   // this.counter += 1;
+    //   this.counterSignal.update(v => v+1);
+    //   // this.increaseBy(1);
+    //   console.log('tick');
+    // }, 2000);
   }
 
   increaseBy(value: number) {
