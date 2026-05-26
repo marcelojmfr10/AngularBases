@@ -9,5 +9,4 @@ import type { Character } from '../../../interfaces/characters.interface'; // es
 export class CharacterListComponent {
   characters = input.required<Character[]>();
   listName = input.required<string>();
-
 }

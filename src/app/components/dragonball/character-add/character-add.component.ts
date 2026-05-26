@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, output, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  output,
+  signal,
+} from '@angular/core';
 import type { Character } from '../../../interfaces/characters.interface';
 
 @Component({
@@ -7,15 +12,13 @@ import type { Character } from '../../../interfaces/characters.interface';
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CharacterAddComponent {
-
   name = signal('');
   power = signal(0);
 
   newCharacter = output<Character>();
 
-
   addCharacter() {
-    if(!this.name() || !this.power() || this.power() <= 0){
+    if (!this.name() || !this.power() || this.power() <= 0) {
       return;
     }
 
@@ -31,10 +34,8 @@ export class CharacterAddComponent {
     this.resetFields();
   }
 
-  resetFields(){
+  resetFields() {
     this.name.set('');
     this.power.set(0);
   }
-
-
 }

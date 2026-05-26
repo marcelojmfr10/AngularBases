@@ -1,13 +1,10 @@
-
-
 import { UpperCasePipe } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
 
 @Component({
   templateUrl: './hero-page.component.html',
-  imports: [UpperCasePipe]
+  imports: [UpperCasePipe],
 })
-
 export class HeroPageComponent {
   name = signal('Ironman');
   age = signal(45);

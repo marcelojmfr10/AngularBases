@@ -12,14 +12,14 @@ interface Character {
   // imports: [NgClass]
 })
 export class DragonballPageComponent {
-
-
   name = signal('');
   power = signal(0);
 
   characters = signal<Character[]>([
     {
-      id: 1, name: 'Goku', power: 9001
+      id: 1,
+      name: 'Goku',
+      power: 9001,
     },
     // {
     //   id: 2, name: 'vegeta', power: 8000
@@ -37,12 +37,12 @@ export class DragonballPageComponent {
 
   powerClasses = computed(() => {
     return {
-      'text-danger': true
-    }
+      'text-danger': true,
+    };
   });
 
   addCharacter() {
-    if(!this.name() || !this.power() || this.power() <= 0){
+    if (!this.name() || !this.power() || this.power() <= 0) {
       return;
     }
 
@@ -57,11 +57,8 @@ export class DragonballPageComponent {
     this.resetFields();
   }
 
-  resetFields(){
+  resetFields() {
     this.name.set('');
     this.power.set(0);
   }
-
-
-
 }
